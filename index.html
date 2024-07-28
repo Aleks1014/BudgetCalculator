@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="functionality.js"></script>
+  </head>
+  <body>
+    <h1>Budget Calculator</h1>
+<p id="intro">
+  Add all the income and expenses that apply to you. Provide round and
+  up-to-date numbers. Once finished, click the results button and we’ll give
+  you a breakdown of your budget.
+</p>
+<div class="details">
+  <div>
+    <h4>What do I need to fill out the Budget Calculator?</h4>
+    <p>Exact figures are best. However, if you just want to get a general idea of your spending, you can enter your best estimates.
+      Remember: it’s better to estimate higher rather than lower.
+    </p>
+  </div>
+  <div>
+    <h4>How does the Budget Calculator work?</h4>
+    <p>
+      Fill out all the categories that apply to you and we’ll calculate your spending against your income. Once finished, you’ll see a breakdown of your outgoings by category. Our budget planner helps you figure out exactly where your money is going – household expenses, bills, travel, etc.
+    </p>
+  </div>
+</div>
+<div class="categories">
+  <div class="category income">
+    <div>
+      <h3>Income</h3>
+      <p>Salary</p>
+      <input class='income-amount' type="number" min=0 placeholder=0 />
+      <p>Investments</p>
+      <input class='income-amount' type="number" min=0 placeholder=0 />
+      <p>Savings</p>
+      <input class='income-amount' type="number" min=0 placeholder=0 />
+    </div>
+  </div>
+  <div class="category">
+    <h3>Home</h3>
+    <p>Rent</p>
+    <input class="home-amount" type="number" min=0 placeholder=0 />
+    <br />
+    <p>Utilities</p>
+    <input class="home-amount" type="number" min=0 placeholder=0 />
+    <br />
+    <p>Groceries</p>
+    <input class="home-amount" type="number" min=0 placeholder=0 />
+    <br>
+    <input class='expense-name' id="home-add-1" type="text" placeholder="Other">
+    <input class="home-amount" type="number" min=0 placeholder="0">
+  </div>
+  <div class="category">
+    <h3>Family</h3>
+    <p>Childcare</p>
+    <input class="family-amount" type="number" min=0 placeholder=0 />
+    <br />
+    <p>School meals</p>
+    <input class="family-amount" type="number" min=0 placeholder=0 />
+    <br>
+    <p>Pets</p>
+    <input class="family-amount" type="number" min=0 placeholder=0 />
+    <br>
+    <input class='expense-name' id="family-add-1" type="text" placeholder="Other">
+    <input class="family-amount" type="number" min=0 placeholder="0">
+  </div>
+  <div class="category">
+    <h3>Lifestyle</h3>
+    <p>Hobbies</p>
+    <input class="lifestyle-amount" type="number" min=0 placeholder=0 />
+    <br />
+    <p>Shopping</p>
+    <input class="lifestyle-amount" type="number" min=0 placeholder=0 />
+    <br />
+    <p>Takeaways</p>
+    <input class="lifestyle-amount" type="number" min=0 placeholder=0 />
+    <br>
+    <input class='expense-name' id="lifestyle-add-1" type="text" placeholder="Other">
+    <input class="lifestyle-amount" type="number" min=0 placeholder="0">
+  </div>
+  <div class="category other">
+    <h3>Other</h3>
+    <input class="expense-name" type="text" placeholder="Expense">
+    <input class="other-amount" type="number" min=0 />
+    <br>
+    <input class="expense-name" type="text" placeholder="Expense">
+    <input class="other-amount" type="number" min=0 />
+  </div>
+</div>
+<button id='see-details' onclick="showResult()">See details</button>
+</body>
+<div class="summary-container">
+  <div id="summary" hidden>
+    <h3>Summary</h3>
+  </div>
+
+  <div id="categories-summary" hidden>
+    <h3>Summary per Category</h3>
+  </div>
+</div>
+<button id="start-again" hidden>Start again</button>
+</body>
+</html>
